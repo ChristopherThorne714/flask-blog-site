@@ -1,8 +1,41 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="jumbotron">
-  <h1>Info about our Company</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+{% extends "base.html" %} {% block content %}
+<link rel="stylesheet" href="{{ url_for('static',filename='info.css') }}" />
+<body>
+  <div class="jumbotron">
+    <h1>Our Passion is Bathrooms..</h1>
+    <p>
+      Our goal is to provide users with bathroom-based entertainment from anywhere and everywhere. Our team here at the BathroomBlogCo. is dedicated to giving you your daily dose of bathroom content each and every single day! And you better be visiting our site every single day, or I might just have to visit you in YOUR bathroom and you definitely wouldn't want that. My bathroom visits are absolutely furious. Visit our site and read some bathroom blogs and prevent your demise at a later date!
+    </p>
+  </div>
+  <div><h1 class="nft_title">a small token of appreciation for visiting our site!</h1></div>
+  <div class="flex_container">
+    <div class="nft1"><img id="nft1ID" class="nft1_img" src="{{ url_for('static', filename='nft1.png') }}">
+      <img id="sike" src="{{ url_for('static', filename='sike.jpg') }}" style="display:none;">
+    <button id="btnClick" onclick = "show()" class="nftBtn">CLAIM YOUR FREE NFT NOW!</button>
+    </div>
+    <div class="nft2"><img id="nft2ID" class="nft2_img" src="{{ url_for('static', filename='nft2.png') }}">
+      <img id="sike2" src="{{ url_for('static', filename='sike2.jpg') }}" style="display:none;">
+      <button id="btnClick" onclick = "show2()" class="nftBtn">CLAIM YOUR FREE NFT NOW!</button>
+    </div>
+    <div class="nft3"><img id="nft3ID" class="nft3_img" src="{{ url_for('static', filename='nft3.gif') }}">
+      <img id="sike3" src="{{ url_for('static', filename='sike3.jpg') }}" style="display:none;">
+      <button id="btnClick" onclick = "show3()" class="nftBtn">CLAIM YOUR FREE NFT NOW!</button>
+    </div>
+  </div>
 
+  <script>
+      function show(){
+        document.getElementById('sike').style.display = 'block';
+        document.getElementById('nft1ID').style.display = 'none'
+      }
+      function show2(){
+        document.getElementById('sike2').style.display = 'block';
+        document.getElementById('nft2ID').style.display = 'none'
+      }
+      function show3(){
+        document.getElementById('sike3').style.display = 'block';
+        document.getElementById('nft3ID').style.display = 'none'
+      }
+  </script>
+</body>
 {% endblock %}
