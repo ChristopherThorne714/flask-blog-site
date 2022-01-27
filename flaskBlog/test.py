@@ -15,8 +15,18 @@ def test2():
     """Dummy docstring"""
     response = app.test_client().get("/login")
     assert response.status_code == 200
+    
+def test3():
+    """Dummy docstring"""
+    response = app.test_client().get("/")
+    assert response.status_code == 200
 
 def test3():
+    """Dummy docstring"""
+    response = app.test_client().get("/account")
+    assert response.status_code == 200
+
+def test5():
     """Dummy docstring"""
     response = app.test_client().get("/register")
     #test if the string is on the page
