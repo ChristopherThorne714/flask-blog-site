@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='register1.css')}}">
 <form method="POST">
+    <div class="register">
     {# This hidden_tag is a CSRF security feature. #}
     {{ form.hidden_tag() }}
     {{ form.email.label }} {{ form.email() }}<br>
@@ -8,5 +10,6 @@
     {{ form.password.label }} {{ form.password() }}<br>
     {{ form.pass_confirm.label }} {{ form.pass_confirm() }}<br>
     {{ form.submit() }}
+</div>
 </form>
 {% endblock %}
