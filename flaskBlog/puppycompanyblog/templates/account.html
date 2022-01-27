@@ -1,10 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
 
+<style>
+
+  body{
+    background-image: url('../static/wallpapertip_wallpaper-for-walls_40965.jpg');
+    background-repeat: no-repeat;
+    position: center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  h1{
+    color: #0096C7;
+  }
+
+  .jumbotron{
+    background-color: #CAF0F8;
+    color: #03045E;
+  }
+
+  .container{
+    border-radius: 16px;
+    background-color: #CAF0F8;
+  }
+
+  .form-group{
+    color: #03045E;
+  }
+
+</style>
+
+<body>
+
 <div class="jumbotron">
   <div align='center'>
-    <h1 >Welcome to the page for {{current_user.username}}</h1>
-    <img align='center' src="{{ url_for('static', filename='profile_pics/' + current_user.profile_image) }}">
+    <h1>Welcome Back,  {{current_user.username}}!</h1>
+    <img align='center' src="{{ url_for('static', filename='profile_pics/default_img.png') }}">
     <p>{{ current_user.email }}</p>
   </div>
 </div>
@@ -15,7 +47,7 @@
     <div class="form-group">
       {{ form.username.label(class="form-group") }}
       {{form.username(class='form-control')  }}
-    </div
+    </div>
     <div class="form-group">
       {{ form.email.label(class="form-group") }}
       {{form.email(class='form-control')  }}
@@ -28,7 +60,7 @@
         {{ form.submit(class="btn btn-primary") }}
     </div>
   </form>
-
+</body>
 </div>
 
 {% endblock content %}
