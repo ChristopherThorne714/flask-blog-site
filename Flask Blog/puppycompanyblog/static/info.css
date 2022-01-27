@@ -1,0 +1,74 @@
+body {
+    background-image: url('bathroom_tile.jpg');
+}
+
+.jumbotron {
+    border-radius: 16px;
+    margin-top: 150px;
+    border: 2px solid #0077B6;
+    background-color: #CAF0F8;
+}
+.nft_title {
+    font-weight: bold;
+    margin-left: 75px;
+    color: black;
+    -webkit-text-stroke: 1px white;
+}
+.flex_container {
+    /* border: 2px solid red; */
+    display: flex;
+}
+.nft1 {
+    /* border: 2px solid red; */
+    width: 35%;
+}
+.nft1_img {
+    border-radius: 16px;
+    width: 240px;
+    height: 240px;
+    margin-left: 60px;
+}
+.nftBtn {
+  /* font-family: "Poppins"; */
+  border-radius: 16px;
+  font-size: .9em;
+  font-weight: bold;
+  margin-left: 63px;
+  padding: 0.1em 1em;
+  background-color: #e9ecef;
+  color: black;
+  border: 2px solid black;
+  border-radius: 0px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.nftBtn:hover {
+    background-color: #ADE8F4;
+    /* color: white; */
+}
+.nft2 {
+    /* border: 2px solid red; */
+    width: 35%;
+}
+.nft2_img {
+    border-radius: 16px;
+    width: 240px;
+    height: 240px;
+    margin-left: 60px;
+}
+.nft3 {
+    /* border: 2px solid red; */
+    width: 35%;
+}
+.nft3_img {
+    border-radius: 16px;
+    width: 240px;
+    height: 240px;
+    margin-left: 60px;
+}
+
+#sike, #sike2, #sike3 {
+    width: 240px;
+    height: 240px;
+    margin-left: 60px;
+}
