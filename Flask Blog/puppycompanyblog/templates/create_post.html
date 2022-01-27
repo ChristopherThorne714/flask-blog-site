@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
+
+<link rel="stylesheet" href="{{url_for('static', filename='create19.css')}}">
+
+<div class="new">
   <form class="form-group" method="POST">
+   
      {{ form.hidden_tag() }}
 
      <div class="form-group">
@@ -15,8 +19,10 @@
      <div class="form-group">
          {{ form.submit(class="btn btn-outline-info") }}
      </div>
+    
   </form>
 
 </div>
+</body>
 
 {% endblock content %}
