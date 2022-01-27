@@ -9,7 +9,8 @@
                               border: solid #0077B6;
                               align-items: center; 
                               background-color: #90E0EF; 
-                              border-radius: 25px;">
+                              border-radius: 25px;
+                              ">
  
   <div>
     <h1>{{ post.title }}</h1>
@@ -23,7 +24,8 @@
     class="profile-pic" style="height: auto;
                               width: 60px;
                               border-radius: 50px;"> 
-    {{post.author.username}}
+
+    <a style="color: black;" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
   </h4>
   
   <!-- VINCE PAMOLARCO: DATE GOES HERE -->
