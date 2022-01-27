@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+<style>
+  body {
+    background-image: url('static/bluesttile.jpg');
+    background-position: center;
+  }
+</style>
 
  <!-- VINCE PAMOLARCO: TITLE GOES HERE -->
 <div class="jumbotron" style="top: 50%; 
@@ -9,8 +15,7 @@
                               border: solid #0077B6;
                               align-items: center; 
                               background-color: #90E0EF; 
-                              border-radius: 25px;
-                              ">
+                              border-radius: 25px;">
  
   <div>
     <h1>{{ post.title }}</h1>
