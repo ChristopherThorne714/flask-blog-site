@@ -2,6 +2,7 @@ alembic==0.9.9
 bcrypt==3.1.4
 blinker==1.4
 certifi==2018.1.18
+cffi==1.11.5
 chardet==3.0.4
 click==6.7
 Flask==1.0.2
@@ -39,3 +40,4 @@ Werkzeug==0.14.1
 wincertstore==0.2
 WTForms==2.1
 pytest==6.2.5
+
