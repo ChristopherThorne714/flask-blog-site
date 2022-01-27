@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 
@@ -12,24 +15,37 @@
 
   </head>
   <body>
-  <ul class="nav">
+  <nav class="nav-main" style="background: #CAF0F8;margin-bottom: 30px;">
+  <ul class="nav" style="font-size: 15px;">
 
   <li class="nav-item">
-    <a class="nav-link" href="{{ url_for('core.index') }}">Home</a>
+    <a class="nav-link"><i class="material-icons" style="color: #023E8A;">wc</i></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('core.index') }}"
+    onMouseOver="this.style.color='#023E8A'">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{{ url_for('core.info') }}">About Us</a>
+    <a class="nav-link" href="{{ url_for('core.info') }}"
+    onMouseOver="this.style.color='#023E8A'">About Us</a>
   </li>
     {% if current_user.is_authenticated %}
-    <li class="nav-link"><a href="{{ url_for('users.logout') }}">Log Out</a></li>
-    <li class="nav-link"><a href="{{ url_for('users.account') }}">Account</a></li>
-    <li class="nav-link"><a href="{{ url_for('blog_posts.create_post') }}">Create Post</a></li>
+    <li class="nav-link"><a href="{{ url_for('users.logout') }}"
+      onMouseOver="this.style.color='#023E8A'">Log Out</a></li>
+    <li class="nav-link"><a href="{{ url_for('users.account') }}"
+      onMouseOver="this.style.color='#023E8A'">Account</a></li>
+    <li class="nav-link"><a href="{{ url_for('blog_posts.create_post') }}"
+      onMouseOver="this.style.color='#023E8A'">Create Post</a></li>
     {% else %}
-    <li class="nav-link"><a href="{{ url_for('users.login') }}">Log In</a></li>
-    <li class="nav-link"><a href="{{ url_for('users.register') }}">Register</a></li>
+    <li class="nav-link"><a href="{{ url_for('users.login') }}"
+      onMouseOver="this.style.color='#023E8A'">Log In</a></li>
+    <li class="nav-link"><a href="{{ url_for('users.register') }}"
+      onMouseOver="this.style.color='#023E8A'">Register</a></li>
     {% endif %}
 
 </ul>
+</nav>
 <div class="container">
   {% block content %}
 
