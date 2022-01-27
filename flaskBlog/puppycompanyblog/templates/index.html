@@ -6,6 +6,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Neonderthaw&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Exo:700');
     @import url('https://fonts.googleapis.com/css?family=Abel');
+   
+      
+    body{
+      background-image: url('static/whitetile.jpg');
+      
+    }
+    
     .jumbotron{
       display:flex; 
       flex-direction: column; 
@@ -30,6 +37,8 @@
 
 
   </style>
+  <body>
+    
   <div class="jumbotron" >
 
     <h1 style="font-size:60px;" >The Throne Blog</h1>
@@ -52,7 +61,7 @@
         <a href="{{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}" class="btn btn-primary">Read Blog Post</a>
       </div>
     </div>
-
+  </body>
    {% endfor %}
 
    <nav aria-label="Page navigation example">
