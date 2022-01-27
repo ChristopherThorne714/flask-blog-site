@@ -1,10 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="jumbotron">
-  <h1>{{ post.title }}</h1>
-  <h2>Written by: {{post.author.username}}</h2>
-  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
-  <p>{{post.text}}</p>
+
+
+ <!-- VINCE PAMOLARCO: TITLE GOES HERE -->
+<div class="jumbotron" style="top: 50%; 
+                              display:flex; 
+                              flex-direction: column; 
+                              border: solid #0077B6;
+                              align-items: center; 
+                              background-color: #90E0EF; 
+                              border-radius: 25px;">
+ 
+  <div>
+    <h1>{{ post.title }}</h1>
+  </div>
+    
+  
+  <!-- VINCE PAMOLARCO: AUTHOR GOES HERE -->
+  <h4>Written by: 
+    
+    <img src="{{ url_for('static', filename='profile_pics/' + current_user.profile_image) }}" 
+    class="profile-pic" style="height: auto;
+                              width: 60px;
+                              border-radius: 50px;"> 
+    {{post.author.username}}
+  </h4>
+  
+  <!-- VINCE PAMOLARCO: DATE GOES HERE -->
+  <h5>Published: {{ post.date.strftime('%B %d, %Y') }}</h5>
+
+  <!-- VINCE PAMOLARCO: POST GOES HERE -->
+
+  <div class = "jumbotron" style="border-radius: 25px;
+                                  background-color: #ADE8F4;
+                                  width: 100%;
+                                  justify-content: center;">
+    <p>{{post.text}}</p>
+  </div>
+  
+
+  <!-- VINCE PAMOLARCO: UPDATE/DELETE GOES HERE -->
    {% if post.author == current_user %}
      <div>
        <a class="btn btn-secondary" href="{{ url_for('blog_posts.update', blog_post_id=post.id) }}">Update</a>
